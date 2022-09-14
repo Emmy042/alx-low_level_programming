@@ -1,51 +1,41 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * print_times_table - prints times table
- * @n : times table to use
- * Return:void
- */
-
+*print_times_table - prints the  times table with
+*parameter
+*@n: parameter
+*Return: returns nothing
+*/
 void print_times_table(int n)
 {
-
-int a = 0, rep, b;
-
-if (n < 0 || n > 15)
-	return;
-
-while (a <= n)
+int digit, mult, result;
+if (n <= 15 && n >= 0)
 {
-	for (b = 0; b <= n; b++)
-	{
-		rep = a * b;
-		if (b == 0)
-			_putchar('0' + rep);
-		else if (rep < 10)
-		{
-			_putchar(' ');
-			_putchar(' ');
-			_putchar('0' + rep);
-		}
-		else if (rep < 100)
-		{
-			_putchar(' ');
-			_putchar('0' + rep / 10);
-			_putchar('0' + rep % 10);
-		}
-		else
-		{
-			_putchar('0' + rep / 100);
-			_putchar('0' + (rep - 100) / 10);
-			_putchar('0' + rep % 10);
-		}
-		if (b < n)
-		{
-			_putchar(',');
-			_putchar(' ');
-		}
-	}
-	_putchar('\n');
-	a++;
+for (digit = 0; digit <= n; digit++)
+{
+_putchar('0');
+
+for (mult = 1; mult <= n; mult++)
+{
+_putchar(',');
+_putchar(' ');
+result = digit * mult;
+if (result <= 99)
+_putchar(' ');
+
+if (result <= 9)
+_putchar(' ');
+if (result >= 100)
+{
+_putchar((result / 100) + '0');
+_putchar((result / 10) % 10 + '0');
+}
+else if (result <= 99 && result >= 10)
+{
+_putchar((result / 10) + '0');
+}
+_putchar((result % 10) + '0');
+}
+_putchar('\n');
+}
 }
 }

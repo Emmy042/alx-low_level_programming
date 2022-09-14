@@ -1,26 +1,45 @@
 #include <stdio.h>
 /**
- * main - main block
- * Description: computes and prints the sum of all the multiples of 3 or
- * 5 below 1024 (excluded), followed by a new line
- * Return: 0
- */
+*main - prints out first 98
+*fibonacci suit numbers
+*Return: return 0
+*/
 int main(void)
 {
-	int i = 0;
-	unsigned long int a = 0, b = 1, next = 0;
+int inc;
+unsigned long n1 = 0, n2 = 1, n3;
+unsigned long n1_h1, n1_h2, n2_h1, n2_h2;
+unsigned long h1, h2;
 
-	while (i < 98)
-	{
-		next = a + b;
-		a = b;
-		b = next;
-		printf("%lu", next);
+for (inc = 0; inc < 92; inc++)
+{
+n3 = n1 + n2;
+printf("%lu, ", n3);
+n1 = n2;
+n2 = n3;
+}
+n1_h1 = n1 / 10000000000;
+n2_h1 = n2 / 10000000000;
+n1_h2 = n1 % 10000000000;
+n2_h2 = n2 % 10000000000;
+for (inc = 93; inc < 99; inc++)
+{
+h1 = n1_h1 + n2_h1;
+h2 = n1_h2 + n2_h2;
+if ((n1_h2 + n2_h2) > 9999999999)
+{
+h1 += 1;
+h2 %= 10000000000;
+}
+printf("%lu%lu", h1, h2);
+if (inc != 98)
+printf(", ");
 
-		if (i < 97)
-			printf(", ");
-		i++;
-	}
-	putchar('\n');
-	return (0);
+n1_h1 = n2_h1;
+n1_h2 = n2_h2;
+n2_h1 = h1;
+n2_h2 = h2;
+}
+printf("\n");
+return (0);
 }
