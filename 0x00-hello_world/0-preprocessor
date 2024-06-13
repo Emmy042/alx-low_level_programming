@@ -1,5 +1,2 @@
 #!/bin/bash
-
-CFILE = "myfile.c"
-
 gcc -E "$CFILE" -o c
