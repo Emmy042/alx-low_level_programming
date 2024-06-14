@@ -1,0 +1,3 @@
+#!/bin/bash
+
+gcc -c -S main.c -o main.s $$ $CFILE="main.s"
