@@ -8,12 +8,12 @@
 int main(void)
 {
 
-char n;
-n = '0';
+int n;
+n = 0;
 
-while (n <= '9')
+while (n <= 9)
 {
-putchar(n);
+putchar(n + '0');
 n++;
 putchar(',');
 putchar(' ');
