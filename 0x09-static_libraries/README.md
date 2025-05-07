@@ -1,0 +1,1 @@
+this repo contains task on static library in C
