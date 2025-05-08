@@ -1,0 +1,1 @@
+this repo is the continuation of tasks on pointers and arrays in C
