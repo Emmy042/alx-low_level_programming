@@ -1,0 +1,1 @@
+this repo contains all the task on argc and argv in C
