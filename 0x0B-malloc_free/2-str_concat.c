@@ -1,21 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-/**
- * str_concat - Concatenates two strings into a newly allocated memory space.
- * @s1: First string.
- * @s2: Second string.
- *
- * Description: This function creates a new string that contains the contents
- *              of s1 followed by the contents of s2, and null-terminates the result.
- *              If NULL is passed for s1 or s2, it is treated as an empty string.
- *              Memory is dynamically allocated and should be freed when no longer needed.
- *              Returns NULL on memory allocation failure.
- *
- * Return: Pointer to the newly created concatenated string, or NULL on failure.
- */
-
 #include <stdlib.h>
 #include <string.h>
 
