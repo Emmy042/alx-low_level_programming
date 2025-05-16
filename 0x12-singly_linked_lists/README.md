@@ -1,0 +1,1 @@
+this repo contains all the tasked i worked on for singly linked list
