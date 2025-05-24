@@ -1,0 +1,1 @@
+this file contains all the tasks on doubly singly linked lists in C

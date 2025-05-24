@@ -22,4 +22,7 @@ while (minutes < 60)
 _("%02d:%02d\n", hour, minute);
 }
 }
+
+/* code not completed*/
+
 }
