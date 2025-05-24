@@ -15,8 +15,8 @@ int count = 0;
 
 while (h != NULL)
 {
-    count++;
-    h = h->next;
+count++;
+h = h->next;
 }
 
 return (count);
